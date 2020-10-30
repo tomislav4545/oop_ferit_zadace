@@ -13,7 +13,7 @@ class Program
 		int viewers = 10;
 		for (int i = 0; i < viewers; i++)
 		{
-			double randomScore = ep1.GenerateRandomScore();
+			
 			ep1.AddView(ep1.GenerateRandomScore());
 			Console.WriteLine(ep1.GetMaxScore());
 		}
