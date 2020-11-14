@@ -2,7 +2,7 @@
 
 namespace Description
 {
-    public class Class1
+    public class Description
     {
     }
 }
