@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DZ1\ClassLibrary1\Episode.csproj" />
+    <ProjectReference Include="..\Description\Description.csproj" />
+  </ItemGroup>
+
 </Project>
