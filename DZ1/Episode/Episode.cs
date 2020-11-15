@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using DescriptionNamespace;
 namespace EpisodeNamespace
 {
     public class Episode
@@ -14,7 +15,18 @@ namespace EpisodeNamespace
             this.scoreSum = scoreSum;
             this.maxScore = maxScore;
         }
-        public Episode() { }
+        public Episode() {
+            viewerCount = 0;
+            scoreSum = 0;
+            maxScore = 0;
+        }
+        public Episode(int viewerCount, double scoreSum, double maxScore, Description description)
+        {
+            this.viewerCount = viewerCount;
+            this.scoreSum = scoreSum;
+            this.maxScore = maxScore;
+
+        }
 
         public int GetViewerCount()
         {
@@ -40,14 +52,12 @@ namespace EpisodeNamespace
 
         }
 
-
         public double GenerateRandomScore()
         {
             Random rand = new Random();
             double randScore = rand.NextDouble() * 10;
             return randScore;
         }
-
 
         public double GetMaxScore()
         {

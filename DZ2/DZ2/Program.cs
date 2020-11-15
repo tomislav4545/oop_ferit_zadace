@@ -1,4 +1,10 @@
 ﻿using System;
+using System.IO;
+using DescriptionNamespace;
+using EpisodeNamespace;
+using TvUtilitiesNamespace;
+
+
 
 namespace DZ2
 {
@@ -10,9 +16,8 @@ namespace DZ2
 			Console.WriteLine(description);
 			Episode episode = new Episode(10, 88.64, 9.78, description);
 			Console.WriteLine(episode);
+			
 
-			// Assume that the number of rows in the text file is always at least 10. 
-			// Assume a valid input file.
 			string fileName = "shows.tv";
 			string[] episodesInputs = File.ReadAllLines(fileName);
 			Episode[] episodes = new Episode[episodesInputs.Length];
