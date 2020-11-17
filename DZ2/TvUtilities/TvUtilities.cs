@@ -1,6 +1,7 @@
 ﻿using System;
 using EpisodeNamespace;
 using DescriptionNamespace;
+using System.Globalization;
 namespace TvUtilitiesNamespace
 {
     public  class TvUtilities
@@ -8,10 +9,11 @@ namespace TvUtilitiesNamespace
 
         public static Episode Parse(string toParse)
         {
+            CultureInfo culture = new CultureInfo("en-US");
             string[] atribute = toParse.Split(',');
             int viewerCount = int.Parse(atribute[0]);
-            double scoreSum = double.Parse(atribute[1]);
-            double maxScore = double.Parse(atribute[2]);
+            double scoreSum = double.Parse(atribute[1],culture);
+            double maxScore = double.Parse(atribute[2],culture);
             int episodeNumber = int.Parse(atribute[3]);
             TimeSpan episodeLength = TimeSpan.Parse(atribute[4]);
             string episodeName = atribute[5];

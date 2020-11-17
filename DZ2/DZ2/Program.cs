@@ -26,7 +26,7 @@ namespace DZ2
 				episodes[i] = TvUtilities.Parse(episodesInputs[i]);
 			}
 			
-			
+			//Ovisno o postavkama formata vremena u Windowsu decimalni brojevi se ispisuju sa , ili sa .
 			Console.WriteLine("Episodes:");
 			Console.WriteLine(string.Join<Episode>(Environment.NewLine, episodes));
 			TvUtilities.Sort(episodes);
