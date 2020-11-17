@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DZ1\Episode\Episode.csproj" />
+    <ProjectReference Include="..\Description\Description.csproj" />
+  </ItemGroup>
+
 </Project>

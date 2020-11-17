@@ -20,12 +20,13 @@ namespace DZ2
 
 			string fileName = "shows.tv";
 			string[] episodesInputs = File.ReadAllLines(fileName);
-			Episode[] episodes = new Episode[episodesInputs.Length];
+			Episode[] episodes = new Episode[episodesInputs.Length];			
 			for (int i = 0; i < episodes.Length; i++)
 			{
 				episodes[i] = TvUtilities.Parse(episodesInputs[i]);
 			}
-
+			
+			
 			Console.WriteLine("Episodes:");
 			Console.WriteLine(string.Join<Episode>(Environment.NewLine, episodes));
 			TvUtilities.Sort(episodes);

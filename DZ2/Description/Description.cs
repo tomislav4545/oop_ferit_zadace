@@ -13,7 +13,7 @@ namespace DescriptionNamespace
             this.episodeNumber = episodeNumber;
             this.episodeLength = episodeLength;
             this.episodeName = episodeName;
-            
+                       
         }
 
         public Description()
@@ -24,10 +24,46 @@ namespace DescriptionNamespace
 
         }
 
-        public int Number { get; set; }
-        public TimeSpan Length{get; set;}
-        public string Name { get; set; }
+        public int Number
+        {
+            get
+            {
+                return this.episodeNumber;
+            }
+            set
+            {
+                this.episodeNumber = value;
+            }
+        }
 
+        public TimeSpan Length{
+            get
+            {
+                return this.episodeLength;
+            }
+            set
+            {
+                this.episodeLength = value;
+            }
+        }
+        public string Name {
+            get
+            {
+                return this.episodeName;
+            }
+            set
+            {
+                this.episodeName = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "" + episodeNumber + "," + episodeLength + "," + episodeName;
+        }
+
+
+        
         
 
 
