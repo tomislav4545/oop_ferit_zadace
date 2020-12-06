@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DZ2\TvUtilities\TvUtilities.csproj" />
     <ProjectReference Include="..\Episode\Episode.csproj" />
   </ItemGroup>
 

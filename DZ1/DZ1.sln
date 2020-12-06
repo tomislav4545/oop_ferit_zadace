@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZ1", "DZ1\DZ1.csproj", "{B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Episode", "Episode\Episode.csproj", "{A2796D36-2CAF-481C-8B85-53C8959EC7CF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TvUtilities", "..\DZ2\TvUtilities\TvUtilities.csproj", "{0123C7B3-EA02-40C9-BE9C-26FA8BFC8864}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A2796D36-2CAF-481C-8B85-53C8959EC7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2796D36-2CAF-481C-8B85-53C8959EC7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2796D36-2CAF-481C-8B85-53C8959EC7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0123C7B3-EA02-40C9-BE9C-26FA8BFC8864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0123C7B3-EA02-40C9-BE9C-26FA8BFC8864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0123C7B3-EA02-40C9-BE9C-26FA8BFC8864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0123C7B3-EA02-40C9-BE9C-26FA8BFC8864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

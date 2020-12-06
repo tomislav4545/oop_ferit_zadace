@@ -1,6 +1,6 @@
 ﻿using System;
 using EpisodeNamespace;
-
+using TvUtilitiesNamespace;
 
 class Program
 {
@@ -13,8 +13,8 @@ class Program
 		for (int i = 0; i < viewers; i++)
 		{
 
-			ep1.AddView(ep1.GenerateRandomScore());
-			Console.WriteLine(ep1.GetMaxScore());
+			ep1.AddView(TvUtilities.GenerateRandomScore());
+			Console.WriteLine(TvUtilities.GenerateRandomScore());
 		}
 		if (ep1.GetAverageScore() > ep2.GetAverageScore())
 		{

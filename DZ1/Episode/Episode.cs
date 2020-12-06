@@ -55,12 +55,7 @@ namespace EpisodeNamespace
 
         }
 
-        public double GenerateRandomScore()
-        {
-            Random rand = new Random();
-            double randScore = rand.NextDouble() * 10;
-            return randScore;
-        }
+       
 
         public double GetMaxScore()
         {
