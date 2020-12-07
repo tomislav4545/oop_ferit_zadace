@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EpisodeNamespace;
 using TvUtilitiesNamespace;
+using SeasonNamespace;
+using IPrinterNamespace;
 
 namespace DZ3
 {
@@ -7,8 +9,6 @@ namespace DZ3
     {
         static void Main(string[] args)
         {
-			// Assume that the number of rows in the text file is always at least 10. 
-			// Assume a valid input file.
 			string fileName = "shows.tv";
 			string outputFileName = "storage.tv";
 

@@ -8,6 +8,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\DZ1\Episode\Episode.csproj" />
     <ProjectReference Include="..\..\DZ2\TvUtilities\TvUtilities.csproj" />
+    <ProjectReference Include="..\IPrinter\IPrinter.csproj" />
+    <ProjectReference Include="..\Season\Season.csproj" />
   </ItemGroup>
 
 </Project>
