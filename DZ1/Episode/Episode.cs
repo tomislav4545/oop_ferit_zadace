@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
 using DescriptionNamespace;
 namespace EpisodeNamespace
 {
@@ -114,6 +113,11 @@ namespace EpisodeNamespace
             if (episode1.GetAverageScore() > episode2.GetAverageScore())
                 return true;
             else return false;
+        }
+
+        public TimeSpan GetEpisodeDuration()
+        {
+            return description.Length;
         }
 
 
