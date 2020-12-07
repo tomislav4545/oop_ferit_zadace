@@ -2,6 +2,8 @@
 using EpisodeNamespace;
 using DescriptionNamespace;
 using System.Globalization;
+using System.IO;
+
 namespace TvUtilitiesNamespace
 {
     public  class TvUtilities
@@ -22,6 +24,7 @@ namespace TvUtilitiesNamespace
             
         }
 
+
         public static void Sort(Episode[] episodes)
         {
             Episode tempEpisode = new Episode();
@@ -38,16 +41,26 @@ namespace TvUtilitiesNamespace
                 
             }
             
-        }
-        
-
-
-
+        }  
         public static double GenerateRandomScore()
         {
             Random rand = new Random();
             double randScore = rand.NextDouble() * 10;
             return randScore;
+        }
+
+
+        public static Episode[] LoadEpisodesFromFile(string fileName)
+        {
+            
+            string[] episodesInString = File.ReadAllLines(fileName);
+            Episode[] episodes = new Episode[episodesInString.Length];
+            for (int i = 0; i < episodes.Length; i++)
+            {
+                episodes[i] = Parse(episodesInString[i]);
+            }
+            return episodes;
+            
         }
     }
 }
