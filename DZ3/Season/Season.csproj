@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DZ1\Episode\Episode.csproj" />
+    <ProjectReference Include="..\..\DZ4\TvException\TvException.csproj" />
   </ItemGroup>
 
 </Project>

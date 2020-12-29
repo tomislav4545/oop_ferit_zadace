@@ -1,12 +1,17 @@
 ﻿using System;
 using EpisodeNamespace;
 using System.Collections.Generic;
+using System.Collections;
+using TvExceptionNamespace;
 
 namespace SeasonNamespace
 {
-    public class Season
+    
+    public class Season : IEnumerable<Episode>
     {
         private int seasonNumber;
+        List<Episode> episodesInSeason = new List<Episode>();
+
         int SeasonNumber
         {
             get
@@ -18,8 +23,7 @@ namespace SeasonNamespace
                 seasonNumber = value;
             }
         }
-
-        List<Episode> episodesInSeason = new List<Episode>();
+        
 
         int TotalViewerCount()
         {
@@ -30,6 +34,7 @@ namespace SeasonNamespace
             }
             return viewers;
         }
+
         TimeSpan TotalDuration()
         {
             TimeSpan duration = default(TimeSpan);
@@ -49,6 +54,23 @@ namespace SeasonNamespace
             }
         }
 
+        public Season(int seasonNumber, List<Episode> episodes)
+        {
+            SeasonNumber = seasonNumber;
+            for (int i = 0; i < episodes.Count; i++)
+            {
+                episodesInSeason.Add(episodes[i]);
+            }
+        }
+
+        public Season(Season other)
+        {
+            SeasonNumber = other.SeasonNumber;
+            episodesInSeason = new List<Episode>();
+            episodesInSeason.AddRange(other.episodesInSeason);            
+        }
+
+
         public override string ToString()
         {
             string str = string.Join(Environment.NewLine, episodesInSeason);
@@ -61,15 +83,39 @@ namespace SeasonNamespace
             get => episodesInSeason.Count;
         }
 
-        public Episode this[int index]
+        public Episode this[int i] => episodesInSeason[i];
+
+
+
+        public IEnumerator<Episode> GetEnumerator()
         {
-            get 
-            { 
-                return episodesInSeason[index];
+            foreach(Episode episode in episodesInSeason)
+            {
+                yield return episode;
+            }             
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public void Add(Episode episode)
+        {
+            episodesInSeason.Add(episode);
+        }
+
+
+        
+        public void Remove(string episodeName)
+        {
+            var error = episodesInSeason.Find(item => item.Name == episodeName);
+            if(error == null)
+            {
+                throw new TvException("No such episode found.",episodeName);
             }
-            set
-            { 
-                episodesInSeason[index] = value;
+            else
+            {
+                episodesInSeason.RemoveAll(item => item.Name == episodeName);
             }
         }
     }
