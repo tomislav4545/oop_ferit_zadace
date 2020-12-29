@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using EpisodeNamespace;
 using DescriptionNamespace;
 using System.Globalization;
@@ -50,17 +51,15 @@ namespace TvUtilitiesNamespace
         }
 
 
-        public static Episode[] LoadEpisodesFromFile(string fileName)
+        public static List<Episode> LoadEpisodesFromFile(string fileName)
         {
-            
             string[] episodesInString = File.ReadAllLines(fileName);
-            Episode[] episodes = new Episode[episodesInString.Length];
-            for (int i = 0; i < episodes.Length; i++)
+            List<Episode> episodesInSeason = new List<Episode>();
+            for (int i = 0; i < 10; i++)
             {
-                episodes[i] = Parse(episodesInString[i]);
+                episodesInSeason.Add(Parse(episodesInString[i]));
             }
-            return episodes;
-            
+            return episodesInSeason;
         }
     }
 }
