@@ -120,6 +120,14 @@ namespace EpisodeNamespace
             return description.Length;
         }
 
+        public string Name
+        {
+            get
+            {
+                return description.Name;
+            }
+        }
+
 
     }
 
