@@ -11,9 +11,6 @@ namespace TvExceptionNamespace
         public TvException(string message)
             : base(message) { }
 
-        public TvException(string message, Exception inner)
-            : base(message, inner) { }
-
         public TvException(string message, string episodeName)
             : this(message)
         {
