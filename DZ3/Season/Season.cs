@@ -67,7 +67,7 @@ namespace SeasonNamespace
         {
             SeasonNumber = other.SeasonNumber;
             episodesInSeason = new List<Episode>();
-            episodesInSeason.AddRange(other.episodesInSeason);            
+            episodesInSeason.AddRange(other.episodesInSeason);
         }
 
 
@@ -84,7 +84,7 @@ namespace SeasonNamespace
         }
 
         public Episode this[int i] => episodesInSeason[i];
-
+        
 
 
         public IEnumerator<Episode> GetEnumerator()
