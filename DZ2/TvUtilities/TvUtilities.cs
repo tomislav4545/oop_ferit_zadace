@@ -55,7 +55,7 @@ namespace TvUtilitiesNamespace
         {
             string[] episodesInString = File.ReadAllLines(fileName);
             List<Episode> episodesInSeason = new List<Episode>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < episodesInString.Length; i++)
             {
                 episodesInSeason.Add(Parse(episodesInString[i]));
             }
