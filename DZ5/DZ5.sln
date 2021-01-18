@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZ5", "DZ5\DZ5.csproj", "{73FFB532-897B-4A21-9839-102B6A416083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiUtilities", "ApiUtilities\ApiUtilities.csproj", "{D8DC1D25-6C41-4095-AEA0-D9E83CA3A91F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73FFB532-897B-4A21-9839-102B6A416083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73FFB532-897B-4A21-9839-102B6A416083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73FFB532-897B-4A21-9839-102B6A416083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73FFB532-897B-4A21-9839-102B6A416083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DC1D25-6C41-4095-AEA0-D9E83CA3A91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DC1D25-6C41-4095-AEA0-D9E83CA3A91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DC1D25-6C41-4095-AEA0-D9E83CA3A91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DC1D25-6C41-4095-AEA0-D9E83CA3A91F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A647F4A5-F22B-45D3-9C57-AAD10577AC67}
+	EndGlobalSection
+EndGlobal
