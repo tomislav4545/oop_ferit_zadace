@@ -23,7 +23,7 @@ namespace ApiUtilities
 
     }
 
-    public class Root : Show
+    public class ShowModel : Show
     {
         public double Score { get; set; }
         public Show Show { get; set; }

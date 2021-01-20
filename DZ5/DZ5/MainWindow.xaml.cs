@@ -25,18 +25,27 @@ namespace DZ5
     {
         public MainWindow()
         {
-            InitializeComponent();                      
+            InitializeComponent();
         }
         private void Button_Clicked(object sender, RoutedEventArgs e)
         {
             string searchQuarey = SearchQuarey.Text;
-            List<Root> shows = ShowProcessor.LoadShows(searchQuarey);
-            ListOfShows.ItemsSource = shows;        
+            List<ShowModel> shows = ShowProcessor.LoadShows(searchQuarey);
+            ListOfShows.ItemsSource = shows;
+        }
+        private void textBoxTest_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.Enter))
+            {
+                Button_Clicked(this, new RoutedEventArgs());
+            }
         }
 
-        private void MoreInfoButton_Click(object sender, RoutedEventArgs e)
+        private void showMoreInfo(object sender, EventArgs e)
         {
-
+            ShowInfoWindow window = new ShowInfoWindow((ShowModel)ListOfShows.SelectedItem);
+            window.Show();
         }
     }
+        
 }

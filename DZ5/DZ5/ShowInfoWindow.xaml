@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="ShowInfoWindow" Height="450" Width="800">
     <Grid>
-        
+        <Canvas Margin="10 10 10 10">
+            <TextBlock x:Name="ShowName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  Canvas.Left="10" Canvas.Top="10" FontSize="35" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock x:Name="Summary" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="61" Width="754" />
+            <ListBox x:Name="Seasons" Canvas.Left="10" Canvas.Top="82" VerticalAlignment="Top"/>
+        </Canvas>
     </Grid>
 </Window>

@@ -1,35 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.Http;
 using Newtonsoft.Json;
-using System.Net;
-using System.IO;
+
 
 namespace ApiUtilities
 {
-    public class ShowProcessor
+    public class SeasonProcesor
     {
-        public static List<ShowModel> LoadShows(string searchQuarey)
+        public static List<SeasonModel> LoadSeasons(int id)
         {
             using (var webClient = new WebClient())
             {
-                string rawJson = webClient.DownloadString($"http://api.tvmaze.com/search/shows?q={searchQuarey}");
+                string strId = id.ToString();
+                string rawJson = webClient.DownloadString($"http://api.tvmaze.com/shows/{strId}/seasons");
                 rawJson = rawJson.Replace("<br />", "");
                 rawJson = rawJson.Replace("<p>", "");
                 rawJson = rawJson.Replace("</p>", "");
                 if (string.IsNullOrWhiteSpace(rawJson))
-                    return new List<ShowModel>();
+                    return new List<SeasonModel>();
 
-                return JsonConvert.DeserializeObject<List<ShowModel>>(rawJson);
+                return JsonConvert.DeserializeObject<List<SeasonModel>>(rawJson);
             }
-            
+
 
         }
-      
     }
-
-
 }

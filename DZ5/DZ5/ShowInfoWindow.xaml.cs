@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ApiUtilities;
 
 namespace DZ5
 {
@@ -19,9 +20,14 @@ namespace DZ5
     /// </summary>
     public partial class ShowInfoWindow : Window
     {
-        public ShowInfoWindow()
+        public ShowInfoWindow(ShowModel show)
         {
             InitializeComponent();
+            ShowName.Text = show.Show.Name;
+            Summary.Text = show.Show.Summary;
+            List<SeasonModel> seasons = SeasonProcesor.LoadSeasons(show.Show.Id);
+            Seasons.ItemsSource = seasons;
+            
         }
     }
 }

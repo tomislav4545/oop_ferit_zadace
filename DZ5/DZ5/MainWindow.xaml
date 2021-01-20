@@ -6,13 +6,12 @@
         xmlns:local="clr-namespace:DZ5"
         xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:ApiUtilities="clr-namespace:ApiUtilities;assembly=ApiUtilities" x:Class="DZ5.MainWindow"
         mc:Ignorable="d"
-        Title="Show Searcher" Height="320" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Show Searcher" Height="290" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Canvas Margin="10,10,10,140">
-            <TextBox x:Name="SearchQuarey" Canvas.Left="0" Canvas.Top="0" Width="259" Height="20" />
+            <TextBox x:Name="SearchQuarey" Canvas.Left="0" Canvas.Top="0" Width="259" Height="20" KeyDown="textBoxTest_KeyDown" />
             <Button  Width="50" Height="20" Canvas.Left="264" x:Name="SearchButton" Content="Search" FontFamily="Microsoft Tai Le" FontSize="14" Click="Button_Clicked"/>
-            <ListBox x:Name="ListOfShows" Height="200" Canvas.Top="25" Width="314" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}"/>
-            <Button x:Name="MoreInfoButton" Content="More info" Canvas.Top="231" Width="314" Height="30" FontFamily="Microsoft Tai Le" FontSize="14"/>
+            <ListBox x:Name="ListOfShows" Height="206" Canvas.Top="25" Width="314" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}" MouseDoubleClick="showMoreInfo"/>
 
         </Canvas>
     </Grid>
