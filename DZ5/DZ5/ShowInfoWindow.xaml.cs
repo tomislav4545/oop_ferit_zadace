@@ -27,7 +27,13 @@ namespace DZ5
             Summary.Text = show.Show.Summary;
             List<SeasonModel> seasons = SeasonProcesor.LoadSeasons(show.Show.Id);
             Seasons.ItemsSource = seasons;
-            
+        }
+
+        private void Seasons_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SeasonModel season = Seasons.SelectedItem as SeasonModel;
+            List<EpisodeModel> episodes = EpisodeProcesor.LoadEpisodes(season.Id);
+            EpisodesInSeason.ItemsSource = episodes;
         }
     }
 }

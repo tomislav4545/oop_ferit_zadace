@@ -12,7 +12,6 @@
             <TextBox x:Name="SearchQuarey" Canvas.Left="0" Canvas.Top="0" Width="259" Height="20" KeyDown="textBoxTest_KeyDown" />
             <Button  Width="50" Height="20" Canvas.Left="264" x:Name="SearchButton" Content="Search" FontFamily="Microsoft Tai Le" FontSize="14" Click="Button_Clicked"/>
             <ListBox x:Name="ListOfShows" Height="206" Canvas.Top="25" Width="314" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}" MouseDoubleClick="showMoreInfo"/>
-
         </Canvas>
     </Grid>
 </Window>

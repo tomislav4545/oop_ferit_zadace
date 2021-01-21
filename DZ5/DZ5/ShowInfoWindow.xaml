@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DZ5"
         mc:Ignorable="d"
-        Title="ShowInfoWindow" Height="450" Width="800">
+        Title="ShowInfoWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Canvas Margin="10 10 10 10">
+        <StackPanel Margin="10 10 10 10" CanVerticallyScroll="True">
             <TextBlock x:Name="ShowName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  Canvas.Left="10" Canvas.Top="10" FontSize="35" TextAlignment="Center" FontWeight="Bold"/>
             <TextBlock x:Name="Summary" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="61" Width="754" />
-            <ListBox x:Name="Seasons" Canvas.Left="10" Canvas.Top="82" VerticalAlignment="Top"/>
-        </Canvas>
+            <ListBox x:Name="Seasons" Canvas.Left="10" Canvas.Top="82" VerticalAlignment="Top" SelectionChanged="Seasons_SelectionChanged" Height="149" Margin="0,0,-0.4,0"/>
+            <ListBox x:Name="EpisodesInSeason" Canvas.Left="18" Canvas.Top="82" Height="139" Margin="0,0,-0.4,0">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Focusable" Value="False"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Window>

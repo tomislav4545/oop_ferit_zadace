@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EpisodeModel.cs" />
+    <Compile Include="EpisodeProcesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeasonModel.cs" />
     <Compile Include="SeasonProcesor.cs" />
