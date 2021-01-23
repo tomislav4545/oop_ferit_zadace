@@ -7,6 +7,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Net;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace ApiUtilities
 {
@@ -17,9 +18,8 @@ namespace ApiUtilities
             using (var webClient = new WebClient())
             {
                 string rawJson = webClient.DownloadString($"http://api.tvmaze.com/search/shows?q={searchQuarey}");
-                rawJson = rawJson.Replace("<br />", "");
-                rawJson = rawJson.Replace("<p>", "");
-                rawJson = rawJson.Replace("</p>", "");
+                rawJson.Replace("&nbsp;", string.Empty);
+                rawJson = Regex.Replace(rawJson, "<.*?>", String.Empty);
                 if (string.IsNullOrWhiteSpace(rawJson))
                     return new List<ShowModel>();
 

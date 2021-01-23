@@ -10,8 +10,8 @@
         <StackPanel Margin="10 10 10 10" CanVerticallyScroll="True">
             <TextBlock x:Name="ShowName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  Canvas.Left="10" Canvas.Top="10" FontSize="35" TextAlignment="Center" FontWeight="Bold"/>
             <TextBlock x:Name="Summary" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="61" Width="754" />
-            <ListBox x:Name="Seasons" Canvas.Left="10" Canvas.Top="82" VerticalAlignment="Top" SelectionChanged="Seasons_SelectionChanged" Height="149" Margin="0,0,-0.4,0"/>
-            <ListBox x:Name="EpisodesInSeason" Canvas.Left="18" Canvas.Top="82" Height="139" Margin="0,0,-0.4,0">
+            <ListBox x:Name="Seasons" Canvas.Left="10" Canvas.Top="82" VerticalAlignment="Stretch" SelectionChanged="Seasons_SelectionChanged" Height="149" Margin="0,0,-0.4,0"></ListBox>
+            <ListBox x:Name="EpisodesInSeason" Canvas.Left="18" Canvas.Top="82" Height="139" VerticalAlignment="Stretch" Margin="0,0,-0.4,0">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}">
                         <Setter Property="Focusable" Value="False"/>

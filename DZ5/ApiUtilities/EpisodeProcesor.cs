@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ApiUtilities
@@ -16,9 +17,8 @@ namespace ApiUtilities
             {
                 string strId = id.ToString();
                 string rawJson = webClient.DownloadString($"http://api.tvmaze.com/seasons/{strId}/episodes");
-                rawJson = rawJson.Replace("<br />", "");
-                rawJson = rawJson.Replace("<p>", "");
-                rawJson = rawJson.Replace("</p>", "");
+                rawJson.Replace("&nbsp;", string.Empty);
+                rawJson = Regex.Replace(rawJson, "<.*?>", String.Empty);
                 rawJson = rawJson.Replace("null", "0");
                 if (string.IsNullOrWhiteSpace(rawJson))
                     return new List<EpisodeModel>();
